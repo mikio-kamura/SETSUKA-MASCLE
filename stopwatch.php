@@ -11,7 +11,7 @@ EOM;
     <head>
         <meta charset="UTF-8">
         <title>javascriptとphpの連携</title>
-        <link rel="stylesheet" href="style/test.scss">
+        <link rel="stylesheet" href="style/style.css">
     </head>
     <body>
     <div class="scss-test-container">scss test</div>
