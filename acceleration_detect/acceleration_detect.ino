@@ -20,5 +20,5 @@ Serial.print(y) ;
 Serial.print(" Z:") ;
 Serial.println(z) ;
 delay(50) ;
-exit(0);
+//exit(0);
 }

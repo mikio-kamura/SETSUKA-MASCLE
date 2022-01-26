@@ -5,12 +5,12 @@ alert( "TEST" )
 console.log('.json_encode($data).');
 </script>
 EOM;
-$link = mysqli_connect('127.0.0.1', 'mikio', 'pass', 'stepping_record');
-if (mysqli_connect_errno()){
-    die("データベースに接続不可:" . mysqli_connect_error() . "\n");
-}else{
-    echo "データベースの接続に成功しました。\n";
-}
+// $link = mysqli_connect('127.0.0.1', 'mikio', 'pass', 'stepping_record');
+// if (mysqli_connect_errno()){
+//     die("データベースに接続不可:" . mysqli_connect_error() . "\n");
+// }else{
+//     echo "データベースの接続に成功しました。\n";
+// }
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ if (mysqli_connect_errno()){
     </head>
     <body>
         <div class="scss-test-container">SETSUKA-WATCHを始めましょう</div>
-        <div class="btn btn-gradient btn-start"><span>START!</span></div>
+        <div class="btn btn--orange btn--radius btn-start"><span>START!</span></div>
         <form acttion="stopwatch.php" method="post">
         <script src="stopwatch.js"></script>
     </body>
