@@ -25,5 +25,6 @@ EOM;
         <div class="btn btn--orange btn--radius btn-start"><span>START!</span></div>
         <form acttion="stopwatch.php" method="post">
         <script src="stopwatch.js"></script>
+        
     </body>
 </html>
