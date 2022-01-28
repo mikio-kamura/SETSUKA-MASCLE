@@ -4,6 +4,6 @@
 *.scss.map
 
 mysql_memo.txt
-.DC_STORE
+.DS_STORE
 test.command
 data
