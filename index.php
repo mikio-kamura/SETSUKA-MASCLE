@@ -5,6 +5,9 @@ alert( "TEST" )
 console.log('.json_encode($data).');
 </script>
 EOM;
+
+include('data.php'); //を書けばグローバルになる。使いたいindex
+
 // $link = mysqli_connect('127.0.0.1', 'mikio', 'pass', 'stepping_record');
 // if (mysqli_connect_errno()){
 //     die("データベースに接続不可:" . mysqli_connect_error() . "\n");
@@ -52,10 +55,10 @@ function h($var)
         <link rel="stylesheet" href="style/style.css">
     </head>
     <body>
-        <div class="scss-test-container">SETSUKA-WATCHを始めましょう</div>
+        <div id="now_time"></div><p id="now_time_word"></p>
+        <div class="scss-test-container">SETSUKA-WATCH</div>
         <div class="btn btn--orange btn--radius btn-start"><span>START!</span></div>
         <form acttion="stopwatch.php" method="post">
         <script src="stopwatch.js"></script>
-        
     </body>
 </html>
