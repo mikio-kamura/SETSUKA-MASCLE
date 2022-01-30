@@ -20,7 +20,6 @@ $dsn = "mysql:host={$db['host']};dbname={$db['dbname']};charset=utf8";
 
 try {
 $db = new PDO($dsn, $db['user'], $db['pass']/*,[
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
     PDO::ATTR_EMULATE_PREPARES => false,
   ]*/);
@@ -28,13 +27,12 @@ $db = new PDO($dsn, $db['user'], $db['pass']/*,[
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     //$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ); //?
 
-    $sql1 = "INSERT INTO user VALUES (7, 'user99', 'NULL')";
+    $sql1 = "INSERT INTO stepping_record VALUES ('NULL', 'NULL', 'NULL')";
     //";";
    $prepare1 = $db->prepare($sql1);
    $prepare1->execute();
 
-
-    $sql = 'SELECT * FROM user';
+    $sql = 'SELECT * FROM stepping_record';
     $prepare = $db->prepare($sql);
     $prepare->execute();
 
