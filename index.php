@@ -19,9 +19,20 @@ $db['dbname'] = ltrim($db['path'], '/');
 $dsn = "mysql:host={$db['host']};dbname={$db['dbname']};charset=utf8";
 
 try {
-    $db = new PDO($dsn, $db['user'], $db['pass']);
+$db = new PDO($dsn, $db['user'], $db['pass']/*,[
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
+    PDO::ATTR_EMULATE_PREPARES => false,
+  ]*/);
     $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ); //?
+
+    $sql1 = "INSERT INTO user VALUES (7, 'user99', 'NULL')";
+    //";";
+   $prepare1 = $db->prepare($sql1);
+   $prepare1->execute();
+
 
     $sql = 'SELECT * FROM user';
     $prepare = $db->prepare($sql);
@@ -36,6 +47,7 @@ try {
 } catch (PDOException $e) {
     echo 'Error: ' . h($e->getMessage());
 }
+
 
 function h($var)
 {
