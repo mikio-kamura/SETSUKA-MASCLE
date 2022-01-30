@@ -18,17 +18,19 @@ include('data.php'); //を書けばグローバルになる。使いたいindex
     <body>
         <div class="center_container">
             <div class="container">
-            <p id="timer">00:00:00</p>
-            <div>
-                <button id="start_stop" class="btn btn-lg btn-primary">START</button>
-            </div>
+            <div class="scss-test-container">今の継続時間</div>
+            <p id="timer" class="big_font">00:00:00</p>
+            
             </div>
             <div id="now_time"></div><p id="now_time_word"></p>
-            <div class="scss-test-container">SETSUKA-WATCH</div>
-            <div class="btn btn--orange btn--radius btn-start"><span>START!</span></div>
-            <form acttion="stopwatch.php" method="post">
+            <div class="scss-test-container">SETSUKA-MASCLE</div>
+            <!-- <div class="btn btn--orange btn--radius btn-start"><span>START!</span></div> -->
+            <!-- <form acttion="stopwatch.php" method="post"> -->
             <p></p>
             <div class="btn btn--orange btn--radius btn-record"><span>記録を見る!</span></div>
+            <div class="paddinggg">
+                <button id="start_stop" class="btn btn--orange btn--radius">START</button>
+            </div>
             <script src="stopwatch.js"></script>
         </div>
     </body>

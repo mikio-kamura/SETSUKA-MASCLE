@@ -39,4 +39,14 @@
 .center_container {
   text-align: center; }
 
+.big_font {
+  color: #5e71e0;
+  margin: 0;
+  padding-top: 100;
+  font-size: 100px;
+  line-height: 1.3em; }
+
+.paddinggg {
+  padding-top: 500; }
+
 /*# sourceMappingURL=style.css.map */
