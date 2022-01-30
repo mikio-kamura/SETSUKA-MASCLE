@@ -7,56 +7,7 @@ console.log('.json_encode($data).');
 EOM;
 
 include('data.php'); //を書けばグローバルになる。使いたいindex
-
-// $link = mysqli_connect('127.0.0.1', 'mikio', 'pass', 'stepping_record');
-// if (mysqli_connect_errno()){
-//     die("データベースに接続不可:" . mysqli_connect_error() . "\n");
-// }else{
-//     echo "データベースの接続に成功しました。\n";
-// }
-$db = parse_url($_SERVER['CLEARDB_DATABASE_URL']);
-$db['dbname'] = ltrim($db['path'], '/');
-$dsn = "mysql:host={$db['host']};dbname={$db['dbname']};charset=utf8";
-
-try {
-$db = new PDO($dsn, $db['user'], $db['pass']/*,[
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
-    PDO::ATTR_EMULATE_PREPARES => false,
-  ]*/);
-    $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    //$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ); //?
-
-    $sql1 = "INSERT INTO stepping_record VALUES ('NULL', 'NULL', 'NULL')";
-    //";";
-   $prepare1 = $db->prepare($sql1);
-   $prepare1->execute();
-
-    $sql = 'SELECT * FROM stepping_record';
-    $prepare = $db->prepare($sql);
-    $prepare->execute();
-
-    echo '<pre>';
-    $prepare->execute();
-    $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
-    print_r(h($result));
-    echo "\n";
-    echo '</pre>';
-} catch (PDOException $e) {
-    echo 'Error: ' . h($e->getMessage());
-}
-
-
-function h($var)
-{
-    if (is_array($var)) {
-        return array_map('h', $var);
-    } else {
-        return htmlspecialchars($var, ENT_QUOTES, 'UTF-8');
-    }
-}
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -65,10 +16,20 @@ function h($var)
         <link rel="stylesheet" href="style/style.css">
     </head>
     <body>
-        <div id="now_time"></div><p id="now_time_word"></p>
-        <div class="scss-test-container">SETSUKA-WATCH</div>
-        <div class="btn btn--orange btn--radius btn-start"><span>START!</span></div>
-        <form acttion="stopwatch.php" method="post">
-        <script src="stopwatch.js"></script>
+        <div class="center_container">
+            <div class="container">
+            <p id="timer">00:00:00</p>
+            <div>
+                <button id="start_stop" class="btn btn-lg btn-primary">START</button>
+            </div>
+            </div>
+            <div id="now_time"></div><p id="now_time_word"></p>
+            <div class="scss-test-container">SETSUKA-WATCH</div>
+            <div class="btn btn--orange btn--radius btn-start"><span>START!</span></div>
+            <form acttion="stopwatch.php" method="post">
+            <p></p>
+            <div class="btn btn--orange btn--radius btn-record"><span>記録を見る!</span></div>
+            <script src="stopwatch.js"></script>
+        </div>
     </body>
 </html>
