@@ -20,7 +20,10 @@ include('data.php'); //を書けばグローバルになる。使いたいindex
             <div class="container">
             <div class="scss-test-container">今の継続時間</div>
             <p id="timer" class="big_font">00:00:00</p>
-            
+            <form>
+                <input type="number">
+                <button type="submit">送信</button>
+            </form>
             </div>
             <div id="now_time"></div><p id="now_time_word"></p>
             <div class="scss-test-container">SETSUKA-MASCLE</div>
