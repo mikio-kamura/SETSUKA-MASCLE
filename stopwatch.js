@@ -62,3 +62,18 @@ record_dom.addEventListener("click", () =>{
     window.location.href = './record.php';
     // window.open('watch_start.html')
 })
+
+var req = new XMLHttpRequest();
+req.open('POST', 'index.php', true);
+
+req.onreadystatechange = function () {
+  var result = document.getElementById('result');
+  if (req.readyState == 4) { // 通信の完了時
+    if (req.status == 200) { // 通信の成功時
+      late_time_dom.innerHTML = req.responseText;
+      administrator.late_time = req.responseText;
+    }
+  } else {
+    // result.innerHTML = "通信中...";
+  }
+}
