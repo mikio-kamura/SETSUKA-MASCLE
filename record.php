@@ -27,6 +27,8 @@ $db = new PDO($dsn, $db['user'], $db['pass']/*,[
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     //$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ); //?
 
+    //jsからgetNowDate()とgetNowTime()を受け取る
+    
     $sql1 = "INSERT INTO stepping_record VALUES ('NULL', 'NULL', 'NULL')";
     //";";
    $prepare1 = $db->prepare($sql1);

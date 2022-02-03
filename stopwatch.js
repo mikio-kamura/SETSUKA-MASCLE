@@ -63,17 +63,34 @@ record_dom.addEventListener("click", () =>{
     // window.open('watch_start.html')
 })
 
-var req = new XMLHttpRequest();
-req.open('POST', 'index.php', true);
+function getNowDate(){
+    var now = new Date();
+    var now_year = now.getFullYear;
+    var now_month = now.getMonth + 1;
+    var now_date = now.getDate;
+    return now_year + '-' + now_month + '-' + now_date;
+}
 
+function getNowTime(){
+    var now = new Date();
+    var now_hour = now.getHours;
+    var now_min = now.getMinutes;
+    var now_sec = now.getSeconds;
+    return now_hour + ':' + now_min + ':' + now_sec;
+}
+
+var req = new XMLHttpRequest();
+req.open('POST', 'record.php', true); 
 req.onreadystatechange = function () {
-  var result = document.getElementById('result');
-  if (req.readyState == 4) { // 通信の完了時
-    if (req.status == 200) { // 通信の成功時
-      late_time_dom.innerHTML = req.responseText;
-      administrator.late_time = req.responseText;
-    }
-  } else {
+    let record_submit_dom = document.querySelector(".btn-record-submit");
+    if (req.readyState == 4) { // 通信の完了時
+        if (req.status == 200) { // 通信の成功時
+            record_submit_dom.addEventListner("click", ()=>{
+                //record.phpにgetNowDate()とgetNowtime()を渡す
+                
+            })
+        }
+    } else {
     // result.innerHTML = "通信中...";
-  }
+    }
 }
