@@ -61,3 +61,25 @@ $blue: #5e71e0;
 .paddinggg {
   padding-top: 500;
 }
+
+//カルーセル
+* {
+  box-sizing: border-box;
+}
+
+.slider {
+  width: 300px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  
+  
+  
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;

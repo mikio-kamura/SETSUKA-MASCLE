@@ -1,52 +1,44 @@
-.btn {
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 1.5;
-  position: relative;
-  display: inline-block;
-  padding: 1rem 4rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  letter-spacing: 0.1em;
-  color: #212529;
-  border-radius: 0.5rem; }
+/*
+Error: Invalid CSS after "...rolling: touch;": expected "}", was ""
+        on line 85 of style/test.scss
 
-.btn--orange {
-  color: #fff;
-  background-color: #eb6100; }
+80:   scroll-snap-type: x mandatory;
+81:   
+82:   
+83:   
+84:   scroll-behavior: smooth;
+85:   -webkit-overflow-scrolling: touch;
 
-.btn--orange:hover {
-  color: #fff;
-  background: #f56500; }
-
-.btn--radius {
-  border-radius: 100vh; }
-
-.scss-test-container {
-  color: #5e71e0;
-  margin: 0;
-  padding-top: 100;
-  font-size: 50px; }
-
-.center_container {
-  text-align: center; }
-
-.big_font {
-  color: #5e71e0;
-  margin: 0;
-  padding-top: 100;
-  font-size: 100px;
-  line-height: 1.3em; }
-
-.paddinggg {
-  padding-top: 500; }
-
-/*# sourceMappingURL=style.css.map */
+Backtrace:
+style/test.scss:85
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:690:in `block'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+/Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+/Library/Ruby/Gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...rolling: touch;\": expected \"}\", was \"\"\A         on line 85 of style/test.scss\A \A 80:   scroll-snap-type: x mandatory;\A 81:   \A 82:   \A 83:   \A 84:   scroll-behavior: smooth;\A 85:   -webkit-overflow-scrolling: touch;"; }

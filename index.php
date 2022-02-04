@@ -18,6 +18,31 @@ include('data.php'); //を書けばグローバルになる。使いたいindex
     <body>
         <div class="center_container">
             <div class="container">
+                <div class="slider">
+                    <a href="#slide-1">1</a>
+                    <a href="#slide-2">2</a>
+                    <a href="#slide-3">3</a>
+                    <a href="#slide-4">4</a>
+                    <a href="#slide-5">5</a>
+
+                    <div class="slides">
+                        <div id="slide-1">
+                        1
+                        </div>
+                        <div id="slide-2">
+                        2
+                        </div>
+                        <div id="slide-3">
+                        3
+                        </div>
+                        <div id="slide-4">
+                        4
+                        </div>
+                        <div id="slide-5">
+                        5
+                        </div>
+                    </div>
+                </div>
             <div class="scss-test-container">今の継続時間</div>
             <p id="timer" class="big_font">00:00:00</p>
             <div class="btm btn--orange btn--radius btn-record-submit"><sapn>記録を送信</span></div>
