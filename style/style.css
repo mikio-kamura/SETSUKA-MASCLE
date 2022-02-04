@@ -1,16 +1,16 @@
 /*
 Error: Invalid CSS after "...rolling: touch;": expected "}", was ""
-        on line 85 of style/test.scss
+        on line 83 of style/test.scss
 
+78:   
+79:   overflow-x: auto;
 80:   scroll-snap-type: x mandatory;
 81:   
-82:   
-83:   
-84:   scroll-behavior: smooth;
-85:   -webkit-overflow-scrolling: touch;
+82:   scroll-behavior: smooth;
+83:   -webkit-overflow-scrolling: touch;
 
 Backtrace:
-style/test.scss:85
+style/test.scss:83
 /Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
 /Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
 /Library/Ruby/Gems/2.6.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
@@ -41,4 +41,4 @@ style/test.scss:85
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...rolling: touch;\": expected \"}\", was \"\"\A         on line 85 of style/test.scss\A \A 80:   scroll-snap-type: x mandatory;\A 81:   \A 82:   \A 83:   \A 84:   scroll-behavior: smooth;\A 85:   -webkit-overflow-scrolling: touch;"; }
+  content: "Error: Invalid CSS after \"...rolling: touch;\": expected \"}\", was \"\"\A         on line 83 of style/test.scss\A \A 78:   \A 79:   overflow-x: auto;\A 80:   scroll-snap-type: x mandatory;\A 81:   \A 82:   scroll-behavior: smooth;\A 83:   -webkit-overflow-scrolling: touch;"; }

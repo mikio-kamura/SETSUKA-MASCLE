@@ -39,7 +39,7 @@ include('data.php'); //を書けばグローバルになる。使いたいindex
                         4
                         </div>
                         <div id="slide-5">
-                        5
+                        5e
                         </div>
                     </div>
                 </div>
